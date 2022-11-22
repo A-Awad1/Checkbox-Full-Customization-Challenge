@@ -1,0 +1,98 @@
+:root {
+  --main-color: #5c48f1;
+  --main-bg-color: #eeecfd;
+  --main-border-color: #e0e0e1;
+  --border-radius: 4px;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+section {
+  background-color: #f9f6f6ea;
+  width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+h3 {
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+form {
+  padding: 10px 0 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+form > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid var(--main-border-color);
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+}
+input {
+  position: absolute;
+  margin: 7px 0 0 7px;
+  width: 17px;
+  height: 17px;
+  border: 2px solid var(--main-border-color);
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  appearance: none;
+  cursor: pointer;
+  box-shadow: inset 2px 2px #fff, inset 2px -2px #fff, inset -2px 2px #fff,
+    inset -2px -2px #fff, inset 15px 15px var(--shadow-color); /*localvariable*/
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+form > div input:hover,
+form > div input:checked,
+form > div input:checked + div {
+  border-color: var(--main-color);
+}
+form > div input:hover {
+  --shadow-color: rgb(92, 72, 241, 0.4);
+}
+form > div input:checked {
+  --shadow-color: var(--main-color);
+}
+form > div input:checked + div {
+  background-color: var(--main-bg-color);
+}
+
+form > div > div i {
+  font-size: 45px;
+  color: var(--main-color);
+  margin-top: 30px;
+}
+form div label {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 12px 0;
+}
